@@ -1,0 +1,66 @@
+{%extends 'base.html'%}
+
+
+{%block conteudo%}
+<style>
+    .header{
+        background-color: black;
+        text-align: center;
+        margin: 70px ;
+        border: 10px black solid;
+        padding: 9px 4px 15px 11px;
+    }
+    
+    #login{
+
+        text-align: center;
+        margin: 10px 100px;
+
+        width: 85%;
+    }
+
+    #senha{
+        text-align: center;
+        margin: 3px 100px;  
+        width: 85%; 
+    }
+
+    #confirmar{
+        margin: 70px 42%;  
+        width: 18%; 
+
+    }
+
+    .form{
+        display: block;
+        background-color: rgb(51, 51, 51);
+        padding: 40px 20px 30px 10px;
+        
+    }
+
+
+    body{
+        background-color: chocolate;
+    }
+
+</style>
+
+
+
+<h1 class="header">Registro</h1>
+
+
+
+
+<form action="{{url_for('registro')}}" method="POST" class="form">
+    <input type="text" placeholder="Login" name="login" id="login">
+    <br>
+    <br>
+    <input type="password"placeholder="Senha" name="senha" id="senha">
+
+    <button id="confirmar">Confirmar</button>
+</form>
+
+
+
+{% endblock conteudo %}

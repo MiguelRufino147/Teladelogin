@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+
+{%block conteudo%}
+
+<h1>NÃO FOI</h1>
+<p>Tentar novamente?</p>
+{%for mensagem in get_flashed_messages() %}
+    <div class="alert alert-danger">
+        {{mensagem}}
+    </div>
+{%endfor%}
+
+
+
+
+{% endblock conteudo %}
